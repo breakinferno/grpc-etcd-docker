@@ -26,7 +26,7 @@ func main() {
 		panic(err)
 	}
 
-	err = grpcUtils.ResgiterServer(*resolver, "sundog.reverse", "127.0.0.1:5300", 5*time.Second, 5)
+	err = grpcUtils.ResgiterServer(*resolver, "sundog.reverse", "docker.for.mac.host.internal:5300", 5*time.Second, 5)
 	if err != nil {
 		fmt.Printf("[reverse-grpc] RegisterServer err: %s\n", err.Error())
 		panic(err)
